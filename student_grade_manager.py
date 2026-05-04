@@ -11,6 +11,7 @@ def print_menu():
     print("3. 计算全班平均分")
     print("4. 查找最高分和最低分")
     print("5. 退出系统")
+    print("6. 按姓名查询学生成绩")
     print("============================")
 
 def add_student(students):
@@ -55,6 +56,13 @@ def find_max_min(students):
     min_students = [k for k, v in students.items() if v == min_score]
     print(f"🏆 最高分：{max_score}分，学生：{', '.join(max_students)}")
     print(f"📉 最低分：{min_score}分，学生：{', '.join(min_students)}")
+def search_student(students):
+    """按姓名查询学生成绩"""
+    name = input("请输入要查询的学生姓名：")
+    if name in students:
+        print(f"✅ {name} 的成绩是：{students[name]}分")
+    else:
+        print(f"❌ 未找到学生 {name}！")
 
 def main():
     students = {}  # 存储学生成绩，格式：{姓名: 成绩}
@@ -72,6 +80,8 @@ def main():
         elif choice == "5":
             print("👋 感谢使用，再见！")
             break
+        elif choice == "6":
+            search_student(students)
         else:
             print("❌ 输入无效，请输入1-5之间的数字！")
 

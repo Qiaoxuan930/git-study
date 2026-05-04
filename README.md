@@ -6,3 +6,4 @@
   3. 第三次提交：优化交互提示，完善异常处理
 4.遇到的问题：执行git config --global user.name "你的姓名"和git config --global user.email "你的邮箱"命令时，无法配置成功，在.git文件夹的config文件中查看，发现user.name和user.email没有配置，需要手动添加。
 5.学习心得
+通过本次学习，我了解了Git的基本概念和操作，以及如何关联本地仓库和远程仓库。我学会了如何使用Git进行版本控制，以及如何在团队中合作开发。
