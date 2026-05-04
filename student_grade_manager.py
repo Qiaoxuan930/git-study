@@ -2,9 +2,10 @@
 # 功能：添加学生、查看成绩、统计平均分、查找最高分
 # 作者：你的名字
 # 版本：v1.0
-
+import os
 def print_menu():
     """打印主菜单"""
+    clear_screen()
     print("\n===== 学生成绩管理系统 =====")
     print("1. 添加学生成绩")
     print("2. 查看所有学生成绩")
@@ -63,6 +64,9 @@ def search_student(students):
         print(f"✅ {name} 的成绩是：{students[name]}分")
     else:
         print(f"❌ 未找到学生 {name}！")
+def clear_screen():
+    """清屏函数，适配不同系统"""
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def main():
     students = {}  # 存储学生成绩，格式：{姓名: 成绩}
